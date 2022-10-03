@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+        crossorigin="anonymous"
+    />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container m-5" id="app">
+        <h1>Hola mundo desde vue con {{mensaje}}</h1>
+        <h2>Invertido: {{invertido}}</h2><!--Propiedad computada-->
+
+        <input type="text" class="form-control mb-3" v-model="mensaje">
+
+        <button class="btn btn-primary" @click="contador++">+</button>
+        <button class="btn btn-danger" @click="contador--">-</button>
+
+        <h3>{{contador}}</h3>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-label="Success example" :style="{'width' : contador + '%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" :class="[color]">{{contador}}%</div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+    <script src="/leccion3/app.js"></script>
+</body>
+</html>
